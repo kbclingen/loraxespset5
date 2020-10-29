@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Managed Trees: Planting Scenarios for an Equitable Boston Canopy</title>
+   	<script src="https://d3js.org/d3.v4.min.js"></script>
+   	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500" rel="stylesheet">
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <style>
+
+    body {
+      background-color: #ffffff;
+    }
+
+  	p {
+			font-family: 'Georgia';
+      font-size: 16px;
+			color:#222222;
+			font-weight:300;
+      text-justify:inter-word;
+		}
+
+		h1 {
+      font-family: 'Arial';
+      color:#222222;
+      font-size:52px;
+      opacity: 1;
+			line-height:1.3;
+      text-shadow: 10px 10px 10px #000;
+		}
+
+    h2 {
+      font-family: 'Arial';
+      color:#222222;
+      font-size:26px;
+			font-weight:100;
+			line-height:1.3;
+      text-shadow: 5px 5px 5px #000;
+		}
+
+		#firstvisualdiv, #secondvisualdiv, #thirdvisualdiv, #fourthvisualdiv {
+      position: sticky;
+      top: 20%;
+      padding-left:5%;
+      padding-right:5%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    	}
+
+    #introtext {
+      position: sticky;
+      top: 20%;
+      padding-left:5%;
+      padding-right:5%;
+      padding-top: 0%;
+      padding-bottom: 5%;
+    }
+
+      /*#firstvisualdiv:hover, #secondvisualdiv:hover >{
+        opacity: 1;
+      	} I don't think this is working*/
+
+
+   .text1opacity, .text2opacity, .text3opacity, .text4opacity {
+        opacity:0;
+        transition: opacity 1s;
+         -webkit-transition: opacity 1s;
+        }
+
+    .sec1opacity, .sec2opacity {
+       opacity:1;
+    }
+
+    .active {
+        opacity:1;
+    	}
+
+    .inactive {
+        opacity:0;
+        transition: opacity 1s;
+         -webkit-transition: opacity 1s;
+      	}
+
+    .title-block {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: .8;
+    }
+
+    .title-image{
+      opacity: .5
+    }
+
+
+	</style>
+</head>
+
+<body>
+  <main role="main" class="container" >
+    <div class="container">
+      <img src="10282020_TreeCatalog-06.svg" class = "title-image" alt="Title Block" style="width:100%; margin-top:20px; padding:20px">
+      <div class="title-block">
+        <h1>Managed Trees: Planting Scenarios for an Equitable Boston Canopy</h1>
+        <h2>A work in progress by Kira Clingen, Winn Costantini, Slide Kelly</h2>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div style='height:400px; margin-left:10px; margin-right:10px'>
+        <br><br>
+        <p id="introtext" class="sec1opacity">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+      </div>
+      <div id="sec1" class="col-8">
+        <img id="firstvisualdiv" class ="text1opacity" width="730" height="365"src="./101920_Scatterplot.png" frameborder = "1"></img>
+        </div>
+     	<div class="col-4">
+     	  <br><br>
+     	  <p></p>
+     	  <br><br>
+     	  <h2>Addressing equity </h2>
+     	  <br><br>
+     	  <p id="text1" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+     	  <br><br>
+     	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+     	  <br><br>
+     	  <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+     	  <br><br>
+     	  <p id="text1b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+     	  <br><br>
+     	</div>
+      <div style='height:400px; margin-left:10px; margin-right:10px'>
+        <br><br>
+        <p id="introtext" class="sec2opacity">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+      </div>
+      <div id="sec2" class="col-8">
+        <img id="secondvisualdiv" class ="text2opacity" width="730" height="365"src="./WireframeMap02_SVI.png" frameborder = "1"></img>
+        </div>
+      <div class="col-4">
+        <br><br>
+        <h2>Mapping canopy</h2>
+        <br><br>
+        <p id="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p id="text2b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+      </div>
+      <div class="col-8">
+        <iframe id="thirdvisualdiv" class = "text3opacity" width="730" height="500" src=" https://www.youtube.com/embed/Cxk48FKhPuQ " frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder = "1" allowfullscreen></iframe>
+        </div>
+      <div class="col-4">
+        <br><br>
+        <h2>Species-Specific Benefits</h2>
+        <br><br>
+        <p id="text3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p id="text3b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+      </div>
+      <div class="col-8">
+        <iframe id="fourthvisualdiv" class = "text4opacity" width="730" height="500"src="./viz1.html" frameborder = "1"></iframe>
+      </div>
+      <div class="col-4">
+        <br><br>
+        <h2>Tree Planting Scenarios</h2>
+        <br><br>
+        <p id="text4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, nulla ut consectetur fermentum, risus nisi pretium justo, sed accumsan mi leo ac tortor. Cras risus mi, volutpat in commodo. </p>
+        <br><br>
+      </div>
+    </div>
+
+  </main><!-- /.container -->
+
+</body>
+
+<script type="text/javascript">
+
+    var controller = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({triggerElement: "#sec1"})
+            .setClassToggle(".sec1opacity", "inactive")
+            .addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#text1"})
+        	.setClassToggle(".text1opacity", "active")
+        	.addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#text1b"})
+          .setClassToggle(".text1opacity", "inactive")
+          .addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#sec2"})
+          .setClassToggle(".sec2opacity", "inactive")
+          .addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#text2"})
+        	.setClassToggle(".text2opacity", "active")
+        	.addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#text2b"})
+          .setClassToggle(".text2opacity", "inactive")
+          .addTo(controller);
+
+		new ScrollMagic.Scene({triggerElement: "#text3"})
+        	.setClassToggle(".text3opacity", "active")
+        	.addTo(controller);
+
+    new ScrollMagic.Scene({triggerElement: "#text3b"})
+          .setClassToggle(".text3opacity", "inactive")
+          .addTo(controller);
+
+
+    new ScrollMagic.Scene({triggerElement: "#text4"})
+        	.setClassToggle(".text4opacity", "active")
+        	.addTo(controller);
+
+          var svg = select("div#firstvisualdiv")
+          						.append("svg")
+          						.attr("viewBox", "0 0 1200 800")
+            						.attr("preserveAspectRatio", "xMinYMid")
+
+</script>
+</body>
+</html>
